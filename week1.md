@@ -64,15 +64,24 @@ I picked Ubuntu OS over other operating systems, such as Fedora and Debian, due 
 
 Below is a screenshot of my Ubuntu VM configurations. The reason it is set that way is to balance performance as well as compatibility and resource efficiency. Allocating 4GB of RAM allows Ubuntu to run without any issues without impacting the host system. The shared network mode provides easy internet access, which is essential for software installation, system updates, and testing. 
 
+
+
+
+
+
 A screenshot of a computer
 
 Description automatically generated 
+
+
 
  
 
 Here is a screenshot of the network configuration, which also shows my IP address when using the Ubuntu operating system. 
 
  
+
+
 
 A screenshot of a computer
 
@@ -83,6 +92,12 @@ Description automatically generated
  
 
 I used a CLI, document system specifications. For example ‘uname’, ‘free’, ‘df -h’, ‘ip addr’. I have attached a screenshot of the results when using these specifications in the Ubuntu terminal. 
+
+
+
+
+
+
 
 A screenshot of a computer
 
