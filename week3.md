@@ -1,7 +1,4 @@
-
-
-
-# Week 3 – Performance Testing Journal  
+# Week 3: Performance Testing Journal  
 
 <br>
 
