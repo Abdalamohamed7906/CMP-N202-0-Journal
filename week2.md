@@ -1,5 +1,5 @@
 
-# Phase 2: Security Planning and Testing Methodology (Ubuntu)  
+# Week 2: Security Planning and Testing Methodology (Ubuntu)  
 <br>
 
 ---
