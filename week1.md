@@ -6,9 +6,8 @@ System architecture diagram
 
  
 
-A diagram of a network
+*img*
 
-Description automatically generated 
 
  
 
@@ -68,10 +67,7 @@ Below is a screenshot of my Ubuntu VM configurations. The reason it is set that 
 
 
 
-
-A screenshot of a computer
-
-Description automatically generated 
+*img*
 
 
 
@@ -82,10 +78,7 @@ Here is a screenshot of the network configuration, which also shows my IP addres
  
 
 
-
-A screenshot of a computer
-
-Description automatically generated 
+*img*
 
  
 
@@ -99,9 +92,7 @@ I used a CLI, document system specifications. For example ‘uname’, ‘free�
 
 
 
-A screenshot of a computer
-
-Description automatically generated 
+*img*
 
  
 
