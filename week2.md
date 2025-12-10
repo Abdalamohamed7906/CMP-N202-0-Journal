@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Performance Testing Plan 
+## 1. Performance Testing Plan
 
 This section describes the performance testing plan, remote monitoring methodology, and testing approach. All test evidence should be attached as screenshots in the indicated sections below.  
 <br>
