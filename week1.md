@@ -6,8 +6,8 @@
 ## 1. System Architecture Diagram  
 Insert your system architecture diagram screenshot below:  
 
-> 📸 **Screenshot placeholder:** *System Architecture Diagram*  
-*img*  
+<img width="452" height="247" alt="image" src="https://github.com/user-attachments/assets/3c1d3b63-ed9c-4d9e-b19e-bfeea16d6e65" />
+
 
 <br><br>
 
@@ -42,8 +42,8 @@ This configuration balances performance, compatibility, and host resource usage:
 - **4GB RAM** → enough for smooth Ubuntu performance without slowing the host  
 - **Shared network mode** → easy internet access for updates, installations, and testing  
 
-> 📸 **Screenshot placeholder:** *VM Settings (RAM, CPU, Storage, Network)*  
-*img*  
+<img width="421" height="257" alt="image" src="https://github.com/user-attachments/assets/a181ff38-d63f-4812-858a-6c9e9b664d47" />
+
 
 <br><br>
 
@@ -53,8 +53,8 @@ This configuration balances performance, compatibility, and host resource usage:
 
 Here is a screenshot of my network settings, including my Ubuntu system’s IP address.  
 
-> 📸 **Screenshot placeholder:** *Network configuration + IP address*  
-*img*  
+<img width="453" height="349" alt="image" src="https://github.com/user-attachments/assets/31058904-9815-4ef1-b5e7-ccfc99534231" />
+
 
 <br><br>
 
@@ -73,8 +73,7 @@ ip addr
 
 Below is the screenshot showing the outputs of these commands.
 
-> 📸 **Screenshot placeholder:** *Terminal output of uname, free, df -h, ip addr*
-> *img*
+<img width="432" height="326" alt="image" src="https://github.com/user-attachments/assets/255062c8-4448-4540-afc1-5a518c3fcc09" />
 
 <br><br>
 
