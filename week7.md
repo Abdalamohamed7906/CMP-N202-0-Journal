@@ -16,7 +16,7 @@ This audit checks how secure a production server is after it has gone through se
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/01_environment_scope.png" />
+<img width="295" height="185" alt="image" src="https://github.com/user-attachments/assets/52f9dc7f-d174-400d-a1c0-af540a554219" />
 
 <br><br>
 
@@ -30,9 +30,6 @@ The security audit was conducted using automated scanning tools and manual confi
 * **Nmap** for network security assessment
 * **Manual inspection** of SSH, firewall, access controls, and services
 
-### Evidence
-
-<img width="1000" src="evidence/screenshots/02_audit_methodology.png" />
 
 <br><br>
 
@@ -54,8 +51,8 @@ The baseline scan showed that several security measures put in place earlier wer
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/03_lynis_baseline.png" />
-<img width="1000" src="evidence/screenshots/04_lynis_hardening_index.png" />
+<img width="288" height="180" alt="image" src="https://github.com/user-attachments/assets/ea7e7eb5-d4c4-4c29-b296-33a39391b714" />
+<img width="283" height="177" alt="image" src="https://github.com/user-attachments/assets/17f03252-3f3f-4d10-ac01-4539d3641167" />
 
 <br><br>
 
@@ -76,8 +73,8 @@ This shows that the server’s outside exposure to attacks is kept very small an
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/05_nmap_services.png" />
-<img width="1000" src="evidence/screenshots/06_nmap_os_detection.png" />
+<img width="301" height="188" alt="image" src="https://github.com/user-attachments/assets/0dbd1fc8-895f-4c24-9f90-40256aa8a019" />
+
 
 <br><br>
 
@@ -96,8 +93,7 @@ The SSH configuration was reviewed to ensure secure remote access.
 The SSH-related recommendations from Lynis, like lowering the number of login attempts and turning off forwarding features, were checked. Some stayed the same because they were needed for proper function, but the SSH settings are still secure and strong overall.
 
 ### Evidence
-
-<img width="1000" src="evidence/screenshots/07_ssh_configuration.png" />
+<img width="278" height="174" alt="image" src="https://github.com/user-attachments/assets/5ebd8f98-cc2d-42ad-88b7-4c6a24e8b480" />
 
 <br><br>
 
@@ -119,7 +115,8 @@ The server is running on Oracle Cloud Infrastructure, which already has strong n
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/08_ufw_status.png" />
+<img width="306" height="191" alt="image" src="https://github.com/user-attachments/assets/9d1bacf9-0397-4f8b-bca4-363beb5c956e" />
+
 
 <br><br>
 
@@ -138,10 +135,9 @@ User accounts and privilege assignments were reviewed to ensure least-privilege 
 No unauthorized users or extra permissions were found. File permission checks reported by Lynis were reviewed, and notes were made where permissions could be made stricter without affecting system functionality.
 
 ### Evidence
+<img width="288" height="180" alt="image" src="https://github.com/user-attachments/assets/0d92de3d-ba79-4347-a9c8-eca99ab680be" /><img width="291" height="182" alt="image" src="https://github.com/user-attachments/assets/754ffc24-8f70-41a9-b54b-b8c15ede01c7" />
+<img width="287" height="180" alt="image" src="https://github.com/user-attachments/assets/fdd56acf-c095-4dc6-8dcc-858864771eb0" />
 
-<img width="1000" src="evidence/screenshots/09_user_accounts.png" />
-<img width="1000" src="evidence/screenshots/10_sudo_privileges.png" />
-<img width="1000" src="evidence/screenshots/11_file_permissions.png" />
 
 <br><br>
 
@@ -155,8 +151,8 @@ Services found by Lynis and Nmap were checked against system requirements. Servi
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/12_running_services.png" />
-<img width="1000" src="evidence/screenshots/13_enabled_services.png" />
+<img width="305" height="191" alt="image" src="https://github.com/user-attachments/assets/4349d1b1-20ac-49f0-9dc8-1920738bb6dd" />
+<img width="306" height="192" alt="image" src="https://github.com/user-attachments/assets/e1d0b67a-2e7a-4fff-b17c-2d3c7e4700cb" />
 
 <br><br>
 
@@ -174,10 +170,7 @@ Lynis identified some kernel settings that were different from its default profi
 Automatic security updates were confirmed as enabled, ensuring vulnerabilities are patched quickly.
 
 ### Evidence
-
-<img width="1000" src="evidence/screenshots/14_aslr_status.png" />
-<img width="1000" src="evidence/screenshots/15_unattended_upgrades.png" />
-
+<img width="305" height="191" alt="image" src="https://github.com/user-attachments/assets/7198c731-bff9-489a-9ab6-19bb9411d1c7" />
 <br><br>
 
 ---
@@ -190,7 +183,8 @@ Some Lynis suggestions, such as installing additional malware scanners or integr
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/16_remediation_actions.png" />
+<img width="303" height="190" alt="image" src="https://github.com/user-attachments/assets/75e99bdd-2c03-4789-ae93-0c5d0c7e5b4f" />
+
 
 <br><br>
 
@@ -208,7 +202,9 @@ lynis audit system
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/17_lynis_post_remediation.png" />
+<img width="311" height="195" alt="image" src="https://github.com/user-attachments/assets/74c4deae-0283-44f2-8a7c-bb0a5e63d48d" />
+<img width="316" height="198" alt="image" src="https://github.com/user-attachments/assets/3c2eb5d1-d54f-45b5-9cc0-6753ef0add06" />
+
 
 <br><br>
 
@@ -233,16 +229,3 @@ Future improvements may include:
 
 Overall, the system shows strong security suitable for a real-world production environment.
 
-### Evidence
-
-<img width="1000" src="evidence/screenshots/18_remaining_risks.png" />
-
-<br><br>
-
----
-
-## Recording Evidence
-
-Screen recordings demonstrating the security audit process are provided separately as part of the assessment submission.
-
----
