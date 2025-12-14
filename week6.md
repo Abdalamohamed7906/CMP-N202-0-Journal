@@ -24,8 +24,10 @@ lsb_release -a
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/01_client_os_version.png" />
-<img width="1000" src="evidence/screenshots/02_server_os_version.png" />
+<img width="292" height="183" alt="image" src="https://github.com/user-attachments/assets/7b57f730-ecfd-48af-aa74-9a31c79f1f43" />
+
+<img width="294" height="184" alt="image" src="https://github.com/user-attachments/assets/0d393f88-f7a1-4b36-b6db-7dfbb4830685" />
+
 
 <br><br>
 
@@ -44,8 +46,8 @@ systemctl status mariadb --no-pager
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/03_apache_status.png" />
-<img width="1000" src="evidence/screenshots/04_mariadb_status.png" />
+<img width="285" height="181" alt="image" src="https://github.com/user-attachments/assets/db52b33b-7888-4694-aabb-3e61c1200480" />
+
 
 <br><br>
 
@@ -63,9 +65,8 @@ htop
 ```
 
 ### Evidence
-
-<img width="1000" src="evidence/screenshots/05_free_baseline.png" />
-<img width="1000" src="evidence/screenshots/06_htop_baseline.png" />
+<img width="298" height="189" alt="image" src="https://github.com/user-attachments/assets/06b7b9cb-2f94-44af-9844-1556641bc682" />
+<img width="312" height="198" alt="image" src="https://github.com/user-attachments/assets/6598a179-a218-4f10-bb87-3e35ef9887d2" />
 
 <br><br>
 
@@ -83,7 +84,7 @@ iostat -x 1
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/07_iostat_baseline.png" />
+<img width="312" height="198" alt="image" src="https://github.com/user-attachments/assets/5c8c3374-57cb-4ed4-86b5-79955306234b" />
 
 <br><br>
 
