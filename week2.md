@@ -1,94 +1,112 @@
+Perfect — below is the **fully combined, cleaned, and submission-ready document**.
+You can **copy–paste this once** directly into GitHub, a report, or a LMS submission.
 
-# Week 2: Security Planning and Testing Methodology (Ubuntu)  
-<br>
+---
+
+# Week 2: Security Planning and Testing Methodology (Ubuntu)
 
 ---
 
 ## 1. Performance Testing Plan
 
-This section describes the performance testing plan, remote monitoring methodology, and testing approach. All test evidence should be attached as screenshots in the indicated sections below.  
-<br>
+This section describes the performance testing plan, remote monitoring methodology, and testing approach. All test evidence is attached as screenshots in the indicated sections.
 
-### 1.1 Objective  
+### 1.1 Objective
 
-The goal of this plan is to test and monitor Ubuntu server performance remotely using command-line tools. Baseline, stress, and recovery performance will be observed and recorded through screenshots.  
-<br>
+The objective of this plan is to test and monitor Ubuntu server performance remotely using command-line tools. Baseline, stress, and recovery performance are observed and recorded.
 
-### 1.2 Testing Steps and Screenshot Placeholders  
+---
 
-#### 1.2.1 Baseline Monitoring  
+### 1.2 Testing Steps and Screenshot Evidence
 
-Run the following commands and take screenshots of each output:  
+#### 1.2.1 Baseline Monitoring
 
-```bash
-htop
-vmstat 5
-iostat -xz 5
-sar -u 5 5
-````
+The following commands were executed to establish baseline system performance.
 
-> **Screenshot Here:**
+**Command 1: `htop`**
+*Screenshot: Baseline CPU and memory usage* <br>
+<img width="432" height="270" alt="Baseline monitoring output from htop" src="https://github.com/user-attachments/assets/1348d095-7e5c-467c-a1b1-8be7b254080d" />
 
-<br>
+**Command 2: `vmstat 5`**
+*Screenshot: Baseline memory and process statistics* <br>
+<img width="432" height="270" alt="Baseline monitoring output from vmstat 5" src="https://github.com/user-attachments/assets/36f98a8c-98ca-4df7-ad2b-679391d724b6" />
+
+**Command 3: `iostat -xz 5`**
+*Screenshot: Baseline disk I/O performance* <br>
+<img width="432" height="270" alt="Baseline monitoring output from iostat -xz 5" src="https://github.com/user-attachments/assets/5472bb74-23e6-466e-8c16-eef48a14c63b" />
+
+**Command 4: `sar -u 5 5`**
+*Screenshot: CPU usage over time* <br>
+<img width="432" height="270" alt="Baseline monitoring output from sar -u 5 5" src="https://github.com/user-attachments/assets/7d75c493-bbe0-4bdd-b904-10da678b8d40" />
+
+---
 
 #### 1.2.2 CPU Stress Test
 
-Use the following command to generate CPU load and monitor the system with `htop` during the test:
+The following command was used to generate CPU load while monitoring performance with `htop`:
 
 ```bash
 stress-ng --cpu 4 --timeout 120s
 ```
+<img width="432" height="270" alt="image" src="https://github.com/user-attachments/assets/d0ef8f50-ea18-42a7-9d7a-69ac4eca2f8c" />
 
-> **Screenshot Here:** 
 
-<br>
+---
 
 #### 1.2.3 Memory Stress Test
 
-Run the following command to generate memory pressure on the system:
+Memory pressure was generated using the following command:
 
 ```bash
 stress-ng --vm 2 --vm-bytes 512M --timeout 120s
 ```
 
-> **Screenshot Here:**
+<img width="432" height="270" alt="image" src="https://github.com/user-attachments/assets/ee6786b6-8d39-45f7-b9f5-9ae33dfd5402" />
 
-<br>
+---
 
 #### 1.2.4 Disk Stress Test
 
-Use the following command to stress the disk subsystem:
+Disk I/O stress testing was performed using:
 
 ```bash
 stress-ng --hdd 1 --hdd-bytes 1G --timeout 120s --temp-path /tmp
 ```
 
-> **Screenshot Here:** 
+<img width="432" height="270" alt="image" src="https://github.com/user-attachments/assets/9f993ded-ac6f-4b7a-bb2b-84dbba0e593b" />
 
-<br><br>
 
 ---
 
 ## 2. Security Configuration Checklist
 
-Document all security configurations applied to the Ubuntu system. Attach screenshots verifying configuration commands and results. <br>
+This section documents all security configurations applied to the Ubuntu system, with validation screenshots.
 
-### 2.1 SSH Hardening & Firewall Configuration (UFW)
+---
 
-I improved the security of the Ubuntu system by hardening SSH and configuring the firewall:
+### 2.1 SSH Hardening and Firewall Configuration (UFW)
 
-* Changed the default SSH port from **22** to **2222**.
-* Disabled **root login** over SSH.
-* Disabled **password-based login** and enabled **key-based authentication only**.
-* Updated UFW firewall rules to allow only the new SSH port.
+SSH access was hardened and firewall rules were configured to improve system security.
 
-A new SSH configuration override file was created at:
+**Security measures implemented:**
+
+* Changed SSH port from **22** to **2222**
+* Disabled **root login**
+* Disabled **password-based authentication**
+* Enforced **key-based authentication**
+* Restricted firewall access to the SSH port only
+
+---
+
+#### SSH Configuration
+
+A new SSH override configuration file was created:
 
 ```bash
 sudo nano /etc/ssh/sshd_config.d/override.conf
 ```
 
-With the following settings:
+Configuration applied:
 
 ```text
 Port 2222
@@ -98,14 +116,18 @@ KbdInteractiveAuthentication no
 PubkeyAuthentication yes
 ```
 
-Firewall configuration for SSH:
+---
+
+#### Firewall Configuration
 
 ```bash
 sudo ufw allow 2222/tcp
 sudo ufw reload
 ```
 
-Validation and service restart:
+---
+
+#### Validation and Restart
 
 ```bash
 sudo sshd -t
@@ -113,101 +135,78 @@ sudo systemctl restart ssh
 sudo sshd -T
 ```
 
-These steps strengthen security by:
+**Security Benefits:**
 
-* Reducing automated SSH scans on the default port.
-* Preventing direct root login.
-* Enforcing key-based authentication.
+* Reduces automated scanning
+* Prevents direct root access
+* Enforces strong authentication
 
-> **Screenshot :**
->
-> * sshd_config override file
-> * `sudo ufw status`
-> * `sudo sshd -T`
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/1c084740-b0f2-44b8-8da3-3bbf784d4557" />
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/f7f816ed-6718-4592-b006-37f07aafd808" />
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/64c8f26c-3941-40f9-a6c0-627892808d7d" />
 
-<br>
+
+---
 
 ### 2.2 Mandatory Access Control (AppArmor)
 
-I configured **AppArmor** to provide Mandatory Access Control (MAC) at the application level.
-
-To check AppArmor status:
+AppArmor was configured to provide Mandatory Access Control at the application level.
 
 ```bash
 sudo apparmor_status
-```
-
-This showed:
-
-* The AppArmor kernel module is loaded.
-* 150+ profiles are loaded.
-* Many profiles are in **enforce** mode.
-
-I also verified the service status:
-
-```bash
 sudo systemctl status apparmor
 ```
 
-AppArmor is active and enabled at boot, ensuring application profiles are enforced automatically and limiting what compromised applications can do.
+Results confirmed:
 
-> **Screenshot Here:**
->
-> * `sudo apparmor_status`
-> * `sudo systemctl status apparmor`
+* AppArmor kernel module is loaded
+* Over 150 profiles are active
+* Profiles are enforced automatically at boot
 
-<br>
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/3dfcfb96-6515-494b-894f-30254567c597" />
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/a1d06966-89a6-4e92-98e4-852edc9eb070" />
+
+---
 
 ### 2.3 Automatic Updates
 
-I enabled automatic security updates using Ubuntu’s **unattended-upgrades** feature.
-
-Configuration file checked:
+Automatic security updates were enabled using **unattended-upgrades**.
 
 ```bash
 sudo nano /etc/apt/apt.conf.d/20auto-upgrades
 ```
 
-The configuration showed that:
+The configuration confirmed:
 
-* Automatic update checks are enabled.
-* Security updates are automatically installed.
+* Automatic update checks are enabled
+* Security updates are installed automatically
 
-This ensures the system regularly receives important security patches without manual intervention.
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/7a814310-328d-4fd0-bd86-73a16c3bd354" />
 
-> **Screenshot Here:** 
 
-<br>
+---
 
 ### 2.4 User Privilege Management
 
-I reviewed and managed user privileges to follow the **principle of least privilege**:
-
-* Checked group membership for my user:
+User privileges were reviewed following the **principle of least privilege**.
 
 ```bash
 groups
 ```
 
-* Verified sudo group membership in `/etc/group` to ensure only trusted users have admin rights.
+Group membership and `/etc/group` were reviewed to ensure only trusted users have administrative access.
 
-This limits the number of users with elevated permissions and reduces the risk of privilege escalation.
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/64d09549-c94c-431a-994a-dae54f0cd5bd" />
 
->**Screenshot Here:**
->
-> * `groups` output
-> * relevant lines from `/etc/group`
 
-<br>
+* `groups` command output
+* Relevant `/etc/group` entries
+
+---
 
 ### 2.5 Network Security (UFW)
 
-Network security was improved mainly using **UFW**:
-
-* SSH was moved to port **2222**.
-* Only the required SSH port was allowed through the firewall.
-
-Commands used:
+Firewall rules were applied using UFW to minimize exposed services.
 
 ```bash
 sudo ufw allow 2222/tcp
@@ -215,101 +214,98 @@ sudo ufw enable
 sudo ufw status
 ```
 
-The final configuration shows that only port **2222/tcp** is open, while other ports remain blocked, reducing the attack surface.
+Only SSH traffic on port **2222/tcp** is permitted.
 
-> **Screenshot Here:**
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/32e0b32c-1e54-4a7b-a580-1e10f0e787b9" />
 
-<br>
+
+* `sudo ufw status`
+
+---
 
 ### 2.6 Brute-Force Protection (Fail2Ban)
 
-To protect against brute-force attacks, I installed and enabled **Fail2Ban**, which monitors login attempts and bans IPs with repeated failures.
-
-Service status was checked with:
+Fail2Ban was installed to protect against brute-force login attempts.
 
 ```bash
 sudo systemctl status fail2ban
 ```
 
-Fail2Ban helps defend against automated attacks on SSH and other services by blocking malicious IPs after multiple failed login attempts.
+Fail2Ban automatically blocks IPs after repeated failed authentication attempts.
 
-> **Screenshot Here:** 
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/a0a1d373-621a-4d5e-8d1e-3d5318a6afbb" />
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/c25a6a98-70cc-4778-81f4-9de5e7059cf7" />
 
-<br><br>
+* `sudo systemctl status fail2ban`
 
 ---
 
 ## 3. Threat Model and Mitigation Strategies
 
-This section identifies key threats to the Ubuntu system and the mitigation strategies applied. <br>
-
-### 3.1 SSH Brute-Force Attacks
-
-**Description:**
-Attackers attempt to gain unauthorized SSH access using password guessing and automated login attempts.
-
-**Mitigation strategies applied:**
-
-* Changed SSH port from **22** to **2222** to reduce automated scanning.
-* Disabled **root login** to prevent direct attacks on the root account.
-* Disabled **password authentication** and enforced **key-based authentication** only.
-* Enabled **UFW** and allowed only port **2222/tcp** for SSH access.
-* Ensured **Fail2Ban** is running to automatically block IPs with repeated failed login attempts.
-
-<br>
-
-### 3.2 Exploitation of Unpatched Software
-
-**Description:**
-Attackers exploit vulnerabilities in outdated system packages or software to gain access or execute malicious code.
-
-**Mitigation strategies applied:**
-
-* Enabled **automatic security updates** using Ubuntu’s `unattended-upgrades` service.
-
-* Verified configuration in:
-
-  ```bash
-  /etc/apt/apt.conf.d/20auto-upgrades
-  ```
-
-* Ensured the update mechanism runs regularly so new patches are installed without manual action.
-
-<br>
-
-### 3.3 Privilege Escalation by Local Users
-
-**Description:**
-Local users attempt to gain root or higher-level privileges by abusing sudo access or misconfigured permissions.
-
-**Mitigation strategies applied:**
-
-* Verified user group membership with `groups` to ensure only trusted users have sudo rights.
-* Checked the `sudo` group in `/etc/group` to confirm only authorized administrators are included.
-* Minimized unnecessary sudo access to reduce the likelihood of successful privilege escalation.
-
-<br>
-
-### 3.4 Network Service Exploits
-
-**Description:**
-Attackers target unnecessary or exposed network services on open ports to gain access or disrupt the system.
-
-**Mitigation strategies applied:**
-
-* Configured UFW to block all ports except SSH on **port 2222**, reducing the number of externally exposed services.
-
-* Verified open ports with:
-
-  ```bash
-  sudo ss -tulpn
-  ```
-
-* Hardened SSH so that only key-based authentication is allowed, and only over the restricted SSH port.
-
-<br><br>
+This section outlines key threats and the mitigation strategies applied.
 
 ---
 
+### 3.1 SSH Brute-Force Attacks
+
+**Threat:** Automated attempts to gain SSH access.
+
+**Mitigations:**
+
+* SSH port changed to **2222**
+* Root login disabled
+* Password authentication disabled
+* UFW restricted access
+* Fail2Ban enabled
+
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/3eb034c1-a838-453c-88f4-ed3d1267204a" />
+
+
+---
+
+### 3.2 Exploitation of Unpatched Software
+
+**Threat:** Vulnerabilities in outdated packages.
+
+**Mitigations:**
+
+* Enabled unattended security updates
+* Verified update configuration
+
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/49824667-45a3-486e-a93e-4f3894d869a0" />
+
+
+---
+
+### 3.3 Privilege Escalation by Local Users
+
+**Threat:** Unauthorized elevation of privileges.
+
+**Mitigations:**
+
+* Verified sudo group membership
+* Restricted administrative access
+
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/be63b4f9-3d22-4e43-b7f2-64b3b1e125b5" />
+
+
+---
+
+### 3.4 Network Service Exploits
+
+**Threat:** Attacks against exposed services.
+
+**Mitigations:**
+
+* Closed all ports except SSH
+* Verified listening services:
+
+```bash
+sudo ss -tulpn
 ```
-```
+
+* Hardened SSH authentication
+
+---
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/2133d4ff-064b-4d2f-b691-adc9cb4c6084" />
+<img width="432" height="273" alt="image" src="https://github.com/user-attachments/assets/89bbe35a-d8c9-40b7-a5f6-6a19e12ead38" />
