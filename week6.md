@@ -245,20 +245,3 @@ A structured performance table was created to summarise baseline measurements ac
 Video Link:
 [Paste GitHub / OneDrive / Google Drive link here]
 
----
-
-### Clip 2
-
-Video Link:
-[Paste GitHub / OneDrive / Google Drive link here]
-
----
-
-### Clip 3
-
-Video Link:
-[Paste GitHub / OneDrive / Google Drive link here]
-
----
-
-If you want, send your **real screenshot filenames** (or a quick folder listing), and I’ll **rename the evidence paths** in this README so it matches your repo exactly.
