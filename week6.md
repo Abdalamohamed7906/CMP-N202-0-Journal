@@ -219,9 +219,24 @@ Performance visualisations were created using collected baseline metrics to prov
 
 A structured performance table was created to summarise baseline measurements across CPU, memory, disk I/O, network, and services. This table supports comparison and analysis across metrics.
 
-### Evidence
 
-<img width="1000" src="evidence/tables/01_baseline_performance_table.png" />
+| Area | Tool | Metric | Value | Unit | Scenario | Notes |
+|-----|------|--------|-------|------|----------|-------|
+| CPU | htop / iostat | CPU utilisation (idle) | ~99.75 | % | Baseline | System idle |
+| CPU | iostat | CPU I/O wait | 0.04 | % | Baseline | No CPU bottleneck |
+| Memory | free -h | Total memory | 11 | GiB | Baseline | Installed RAM |
+| Memory | free -h | Used memory | 0.41 | GiB | Baseline | Low usage |
+| Memory | free -h | Free memory | 8.2 | GiB | Baseline | High availability |
+| Memory | free -h | Swap usage | 0 | GiB | Baseline | Swap disabled |
+| Disk I/O | iostat | Disk read throughput | 8.83 | kB/s | Baseline | Low activity |
+| Disk I/O | iostat | Disk write throughput | 68.27 | kB/s | Baseline | Background writes |
+| Disk I/O | iostat | Disk utilisation | <5 | % | Baseline | Disk not saturated |
+| Network | SSH | Connection latency | ~0.4 | seconds | Baseline | TCP-based test |
+| Services | systemctl | Apache service status | Active | N/A | Baseline | Web server running |
+| Services | systemctl | MariaDB service status | Active | N/A | Baseline | Database running |
+| System | OS info | Server OS | Ubuntu 22.04.5 LTS | N/A | Baseline | Oracle Cloud |
+| System | OS info | Client OS | Ubuntu 24.04.1 LTS | N/A | Baseline | Local workstation |
+
 
 <br><br>
 
