@@ -37,7 +37,8 @@ Below are the exact commands used to install each performance-testing applicatio
 sudo apt update
 sudo apt install stress-ng fio iperf3 apache2 -y
 ````
-
+<img width="468" height="297" alt="image" src="https://github.com/user-attachments/assets/eaf2588e-1ea0-43e6-b513-d8aa81cf3aca" />
+<img width="468" height="297" alt="image" src="https://github.com/user-attachments/assets/14f8fe82-d54a-4433-bf82-9281995d2e6c" />
 <br>
 
 ### Verify installations
@@ -48,7 +49,7 @@ fio --version
 iperf3 --version
 apache2 -v
 ```
-
+<img width="468" height="297" alt="image" src="https://github.com/user-attachments/assets/beb94765-69a4-48c5-a318-9cc250352646" />
 <br>
 <br>
 
@@ -108,7 +109,11 @@ htop
 stress-ng --cpu 4 --timeout 60s
 ```
 
-The CPU -intenstive tess was run with stress-ng to make 4 CPU cores work for 60 seconds. At the same time, htop was used to check the CPU usage, the overall load, and what processes were running.
+The CPU -intenstive tess was run with stress-ng to make 4 CPU cores work for 60 seconds. At the same time, htop was used to check the CPU usage, the overall load, and what processes were running.<br>
+
+<img width="285" height="180" alt="image" src="https://github.com/user-attachments/assets/2b3f9b5c-d957-422d-b343-834a66501bb2" />
+<img width="282" height="179" alt="image" src="https://github.com/user-attachments/assets/e53879fc-b850-4d21-910f-88d66312343e" />
+
 <br>
 
 ---
@@ -122,8 +127,10 @@ htop
 stress-ng --vm 2 --vm-bytes 1G --timeout 60s
 ```
 
-The RAM-intensive test was run using stress-ng, with two memory workers each using 1GB of RAM. At the same time, htop was used to check how much RAM was being used and what processes were running. As expected, htop showed a big rise in memory use during the test, showing that the system was using a lot of memory. 
+The RAM-intensive test was run using stress-ng, with two memory workers each using 1GB of RAM. At the same time, htop was used to check how much RAM was being used and what processes were running. As expected, htop showed a big rise in memory use during the test, showing that the system was using a lot of memory. <br>
 
+<img width="258" height="164" alt="image" src="https://github.com/user-attachments/assets/b6f255d0-73ac-43e9-beb4-f923d3f65db7" />
+<img width="255" height="162" alt="image" src="https://github.com/user-attachments/assets/a3537adc-d7fd-4cd0-a29a-0767867fa9cc" />
 <br>
 
 ---
@@ -138,7 +145,9 @@ fio --name=seqwrite --filename=fiotestfile --size=1G --bs=1M --rw=write --direct
 rm fiotestfile
 ```
 
-For the storage test, I used fio to write a 1GB file and kept an eye on iotop to check the disk activity. Fio showed that the system was writing data quickly, which meant the storage drive was working hard. Iotop also showed higher write activity at the same time. This confirmed that the test was properly stressing the disk.
+For the storage test, I used fio to write a 1GB file and kept an eye on iotop to check the disk activity. Fio showed that the system was writing data quickly, which meant the storage drive was working hard. Iotop also showed higher write activity at the same time. This confirmed that the test was properly stressing the disk.<br>
+
+<img width="328" height="208" alt="image" src="https://github.com/user-attachments/assets/02f38577-d19b-4f87-a095-7d04dd2c38bb" />
 
 <br>
 
@@ -152,7 +161,10 @@ Commands used:
 iperf3 -s
 iperf3 -c 192.168.1.84 -t 10
 ```
-I used iPerf3 to check how well my system's network is performing. I started an iPerf3 server and then connected a client to it. The test lasted for 10 seconds and showed a steady bitrate of about 123 Gbytes per second. Both the server and client reports had the same results, which means the network can handle high data transfer speeds. The screenshots show the speed and bitrate numbers from the test.
+I used iPerf3 to check how well my system's network is performing. I started an iPerf3 server and then connected a client to it. The test lasted for 10 seconds and showed a steady bitrate of about 123 Gbytes per second. Both the server and client reports had the same results, which means the network can handle high data transfer speeds. The screenshots show the speed and bitrate numbers from the test.<br>
+<img width="349" height="221" alt="image" src="https://github.com/user-attachments/assets/62f5121c-1740-42a7-8afd-a2d4cf1fe26c" />
+<img width="347" height="199" alt="image" src="https://github.com/user-attachments/assets/2edeae3f-75b3-4906-8c2b-d0b4961751f6" />
+
 <br>
 
 ---
@@ -168,8 +180,10 @@ ab -n 500 -c 50 http://127.0.0.1/
 htop
 ```
 
-AFor the server-intensive test, I used ApacheBench to send 1,000 requests to my Apache web server, with 50 requests running at the same time. While the test was happening, I used htop to check how much CPU and memory Apache was using. The ApacheBench results showed that all 1,000 requests were completed without any problems, and the server handled them quickly. The test also showed how many requests the server could handle each second and how long each request took. The htop display showed that Apache used more CPU during the test, which shows the workload was stressing the web server. 
+AFor the server-intensive test, I used ApacheBench to send 1,000 requests to my Apache web server, with 50 requests running at the same time. While the test was happening, I used htop to check how much CPU and memory Apache was using. The ApacheBench results showed that all 1,000 requests were completed without any problems, and the server handled them quickly. The test also showed how many requests the server could handle each second and how long each request took. The htop display showed that Apache used more CPU during the test, which shows the workload was stressing the web server. <br>
 
+<img width="335" height="213" alt="image" src="https://github.com/user-attachments/assets/5034a600-4016-450a-abba-1fdcdd03b093" />
+<img width="335" height="212" alt="image" src="https://github.com/user-attachments/assets/f0e85b6b-132c-42aa-9fc6-9f3e5e797d4f" />
 <br>
 <br>
 
