@@ -123,29 +123,21 @@ hostnamectl
 
 ## 6. **Video / Clip Uploads**
 
-### 👉 Instructions to Add Video Evidence
 
-1. Go to your GitHub repository
-2. Click **Add file → Upload files**
-3. Upload your clip (e.g., `ssh-demo.mp4`)
-4. Copy the link GitHub shows after upload
-5. Paste it into one of the placeholders below
+* Clip 1 – <br>
+https://roehamptonprod-my.sharepoint.com/:v:/g/personal/mohameda58_roehampton_ac_uk/IQDhaTIAYQfFT6jzAwmCjhgVAX6RzGjr4ib_gpJomRjQlEY <br>
 
-* **Clip 1 – SSH Key Login Demo:**
-  `[Upload your video and paste its GitHub link here]`
+* Clip 2 – <br>
+https://roehamptonprod-my.sharepoint.com/:v:/g/personal/mohameda58_roehampton_ac_uk/IQCYx6IpnVUaSIuFMoKLu4SQAUGujEBtcXaCOWwi8Tj4GYY) <br>
 
-* **Clip 2 – UFW Firewall Rule Test:**
-  `[Upload your video and paste its GitHub link here]`
+* Clip 3 – <br>
+https://roehamptonprod-my.sharepoint.com/:v:/g/personal/mohameda58_roehampton_ac_uk/IQCY02Hs7IaiTIKufQXVwVNYAan2diNcyjDkA6MWaqWUW5o <br>
 
-* **Clip 3 – Adminuser Remote Management:**
-  `[Upload your video and paste its GitHub link here]`
+* Clip 4 – <br>
+https://roehamptonprod-my.sharepoint.com/:v:/g/personal/mohameda58_roehampton_ac_uk/IQDn1ODmTgL5QaQBTjfqai56AYZRDXRIitA0JSQn1H7SZ8I) <br>
 
-* **Clip 4 – SSH Config Before/After Walkthrough:**
-  `[Upload your video and paste its GitHub link here]`
-
-* **Clip 5 – Any Additional Demo:**
-  `[Upload your video and paste its GitHub link here]`
-
+* Clip 5 –
+https://roehamptonprod-my.sharepoint.com/:v:/g/personal/mohameda58_roehampton_ac_uk/IQCtRJ0Q8acrQ5d8huxR2xMhAcBGKDVVZOQwlq4HRhtLl3k
 <br><br>
 
 ---
