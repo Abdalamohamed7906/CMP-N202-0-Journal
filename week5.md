@@ -15,9 +15,14 @@ sudo journalctl -k | grep -i apparmor | tail
 ````
 
 ### Evidence
+<img width="295" height="185" alt="image" src="https://github.com/user-attachments/assets/51e7f946-de90-41ae-8fd2-be3def86c24c" />
+<img width="295" height="185" alt="image" src="https://github.com/user-attachments/assets/7899c9ce-cbf9-4fe1-a3d8-f8f8051a84b2" />
+<img width="297" height="186" alt="image" src="https://github.com/user-attachments/assets/c917c5ca-854d-435c-bd73-6e490a0f8aa8" />
+<img width="298" height="186" alt="image" src="https://github.com/user-attachments/assets/b239b36d-043f-43d2-a1c2-86a29a46da5e" />
+<img width="295" height="185" alt="image" src="https://github.com/user-attachments/assets/627452f9-58c2-4c11-b3f0-878356473855" />
+<img width="295" height="184" alt="image" src="https://github.com/user-attachments/assets/0ead3ff8-1884-4c67-8eff-8509d06dff4d" />
 
-<img width="1000" src="evidence/screenshots/01_apparmor_status.png" />
-<img width="1000" src="evidence/screenshots/02_apparmor_logs.png" />
+
 
 <br><br>
 
@@ -35,9 +40,10 @@ systemctl status unattended-upgrades --no-pager
 ```
 
 ### Evidence
+<img width="292" height="182" alt="image" src="https://github.com/user-attachments/assets/5d01b54b-2115-46d4-a6ca-dc5539457c98" />
+<img width="290" height="181" alt="image" src="https://github.com/user-attachments/assets/4fc0a486-fc23-4ab8-a5bb-01456aeef7b8" />
+<img width="291" height="182" alt="image" src="https://github.com/user-attachments/assets/b3c3899a-6d3d-412e-87d3-32642e93986b" />
 
-<img width="1000" src="evidence/screenshots/03_auto_upgrades_config.png" />
-<img width="1000" src="evidence/screenshots/04_unattended_status.png" />
 
 <br><br>
 
@@ -57,10 +63,9 @@ sudo fail2ban-client status sshd
 ```
 
 ### Evidence
-
-<img width="1000" src="evidence/screenshots/05_fail2ban_config.png" />
-<img width="1000" src="evidence/screenshots/06_fail2ban_running.png" />
-<img width="1000" src="evidence/screenshots/07_fail2ban_sshd_status.png" />
+<img width="290" height="182" alt="image" src="https://github.com/user-attachments/assets/dfe76c3d-7f3a-4186-b714-97d1183b08b3" />
+<img width="289" height="181" alt="image" src="https://github.com/user-attachments/assets/639c0ea0-4333-4cc2-8c09-feb1d41faefb" />
+<img width="288" height="180" alt="image" src="https://github.com/user-attachments/assets/370850e4-6c3c-477c-8d28-f46b973193b5" />
 
 <br><br>
 
@@ -80,8 +85,8 @@ sudo /usr/local/bin/security-baseline.sh
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/08_baseline_script.png" />
-<img width="1000" src="evidence/screenshots/09_baseline_run.png" />
+<img width="290" height="181" alt="image" src="https://github.com/user-attachments/assets/3328c096-29d3-4ab7-ada5-34a9aa91c1e7" />
+<img width="293" height="183" alt="image" src="https://github.com/user-attachments/assets/691c59ff-75ee-4bd2-8a80-f4f5eee539a5" />
 
 <br><br>
 
@@ -101,8 +106,10 @@ chmod +x scripts/monitor-server.sh
 
 ### Evidence
 
-<img width="1000" src="evidence/screenshots/10_monitor_script.png" />
-<img width="1000" src="evidence/screenshots/11_monitor_output.png" />
+
+<img width="309" height="193" alt="image" src="https://github.com/user-attachments/assets/c463bf98-2c42-4222-9f8d-a069ef6fe366" />
+<img width="316" height="197" alt="image" src="https://github.com/user-attachments/assets/e5e397b1-fc49-4df7-9199-2c5867b713ce" />
+
 
 <br><br>
 
